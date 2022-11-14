@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de média</title>
+</head>
+<body>
+    <h1>Calculadora de média</h1>
+
+    <label for="nota1">Insira a primeira nota:</label>
+    <input type="text" id="nota1">
+    <br>
+    <label for="nota2">Insira a segunda nota:</label>
+    <input type="text" id="nota2">
+    <br>
+    <!-- <p>Fórmula: ºC = (ºF - 32) / 1.8</p> -->
+    <p>Média:<span id="media"></span></p>
+    <p>Situação:<span id="sit"></span></p>
+    <br>
+    <button onclick="calcula()">Calcular média</button>
+
+    <script>
+
+        function calcula(){
+            let nota1 = parseFloat(document.getElementById("nota1").value);
+            let nota2 = parseFloat(document.getElementById("nota2").value);
+            let media = ( nota1 + nota2)/2
+
+            
+            let situacao = "";
+            let cor = "";
+            if (media >= 6.0) {
+                situacao = "Aprovado";
+                cor = "blue";
+            } else {
+                if (media >= 2) {
+                    situacao = "Exame Final";
+                    cor = "orange";
+                } else {
+                    situacao = "Reprovado";
+                    cor = "red";
+                }
+            }
+
+            document.getElementById("sit").innerHTML = situacao;
+            document.getElementById("sit").style.color = cor;
+            document.getElementById("media").innerHTML = media;
+            
+        }
+    </script>
+    
+</body>
+</html>
