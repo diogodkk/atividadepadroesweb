@@ -1,5 +1,5 @@
 Diogo Henrique Pinto Ferreira
 <br>
-Lorena
+Lorena Freitas
 <br>
-Davi
+Davi da Silva Pau Ferro
