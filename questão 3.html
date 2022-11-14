@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The appendChild() Method</h2>
+
+<input type="text" value="" id="txtl">
+
+<ul id="l">
+    <li>Coffe</li>
+    <li>Tea</li>
+    
+</ul>
+
+<p>Click "Append" to append an item to the end of the list:</p>
+
+<button onclick="addLI(document.getElementById('txtl').value)">Append</button>
+
+
+<script>
+	        function addLI(l){
+				if(lista == ""){
+					alert("Informe um veículo");
+					document.getElementById("txtl").focus();
+				}else{
+					var lista=document.getElementById("l");
+					var novoItem=document.createElement("li");
+					novoItem.textContent=l;
+					lista.appendChild(novoItem);
+				}
+			}
+</script>
+
+</body>
+</html>
